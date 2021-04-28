@@ -1,2 +1,2 @@
-ng build --prod=true --outputPath=docs --baseHref=https://gruelt.github.io/poolog/
+ng build --prod=true --outputPath=docs --baseHref=/PROJECT_NAME/
 
