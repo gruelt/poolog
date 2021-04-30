@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RecordComponent } from './record/record.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { VelivertComponent } from './velivert/velivert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RecordComponent
+    RecordComponent,
+    VelivertComponent
   ],
   imports: [
     BrowserModule,

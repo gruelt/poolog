@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 // Import custom modules
 import { HomeComponent} from './home/home.component';
 import { RecordComponent} from './record/record.component';
+import { VelivertComponent} from './velivert/velivert.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,12 @@ const routes: Routes = [
   {
     path: 'record',
     component: RecordComponent,
+  },
+  {
+    path: 'velivert',
+    component: VelivertComponent,
   }
+
 
 ];
 
