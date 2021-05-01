@@ -11,8 +11,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewheroComponent } from './heroes/viewhero/viewhero.component';
 
-
-
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +25,7 @@ import { ViewheroComponent } from './heroes/viewhero/viewhero.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,

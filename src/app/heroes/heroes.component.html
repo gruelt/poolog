@@ -15,6 +15,8 @@
   <div class="card-body">
     <h5 class="card-title">{{hero.name | titlecase}}</h5>
     <p class="card-text">{{hero.power | titlecase}}.</p>
+    <label for="name">Hero name: </label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
 
     <a href="/heroes/{{hero.id}}" class="btn btn-primary">Voir le hero</a>
   </div>

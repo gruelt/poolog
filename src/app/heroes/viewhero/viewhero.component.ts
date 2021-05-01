@@ -14,7 +14,7 @@ export class ViewheroComponent implements OnInit {
     this.route.params.subscribe(
       params => {
         console.log(params),
-          this.heroid= params.id
+          this.heroid = params.id
       }
     );
 
