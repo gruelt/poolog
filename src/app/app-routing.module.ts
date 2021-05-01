@@ -7,6 +7,7 @@ import { HomeComponent} from './home/home.component';
 import { RecordComponent} from './record/record.component';
 import { VelivertComponent} from './velivert/velivert.component';
 import { HeroesComponent} from './heroes/heroes.component';
+import { ViewheroComponent} from './heroes/viewhero/viewhero.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'heroes',
     component: HeroesComponent,
+  },
+  {
+    path: 'heroes/:id',
+    component: ViewheroComponent,
   }
 
 

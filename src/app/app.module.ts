@@ -9,6 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VelivertComponent } from './velivert/velivert.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewheroComponent } from './heroes/viewhero/viewhero.component';
+
 
 
 
@@ -19,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     RecordComponent,
     VelivertComponent,
-    HeroesComponent
+    HeroesComponent,
+    ViewheroComponent
   ],
   imports: [
     BrowserModule,

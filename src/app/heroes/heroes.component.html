@@ -1,16 +1,24 @@
-<p>heroes works!</p>
+<div class="jumbotron">
+  <img src="/assets/img/hero.png" width="340" height="240" alt="">
+<!--  <h1 class="display-4">Heroes Demo</h1>-->
+  <p class="lead">This is a simple angular tour of heroes implementation with custom tests !.</p>
+  <hr class="my-4">
 
 
-{{hero.name}} {{hero.power}}
+</div>
+
+
+<!--{{hero.name}} {{hero.power}}-->
 
 <div class="card" style="width: 18rem;">
 
   <div class="card-body">
-    <h5 class="card-title">{{hero.name}}</h5>
-    <p class="card-text">{{hero.power}}.</p>
+    <h5 class="card-title">{{hero.name | titlecase}}</h5>
+    <p class="card-text">{{hero.power | titlecase}}.</p>
+
     <a href="/heroes/{{hero.id}}" class="btn btn-primary">Voir le hero</a>
   </div>
 </div>
 
-<ngb-alert>{{hero.name}}</ngb-alert>
+
 
