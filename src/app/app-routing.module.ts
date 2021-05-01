@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent} from './home/home.component';
 import { RecordComponent} from './record/record.component';
 import { VelivertComponent} from './velivert/velivert.component';
+import { HeroesComponent} from './heroes/heroes.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'velivert',
     component: VelivertComponent,
+  },
+  {
+    path: 'heroes',
+    component: HeroesComponent,
   }
 
 

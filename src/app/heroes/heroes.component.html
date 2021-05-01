@@ -1,0 +1,16 @@
+<p>heroes works!</p>
+
+
+{{hero.name}} {{hero.power}}
+
+<div class="card" style="width: 18rem;">
+
+  <div class="card-body">
+    <h5 class="card-title">{{hero.name}}</h5>
+    <p class="card-text">{{hero.power}}.</p>
+    <a href="/heroes/{{hero.id}}" class="btn btn-primary">Voir le hero</a>
+  </div>
+</div>
+
+<ngb-alert>{{hero.name}}</ngb-alert>
+

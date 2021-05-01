@@ -11,6 +11,8 @@ export class VelivertComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+
     axios.get('https://saint-etienne-gbfs.klervi.net/gbfs/en/station_information.json', {
       params: {
         ID: 12345
