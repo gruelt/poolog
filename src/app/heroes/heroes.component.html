@@ -10,7 +10,25 @@
 
 <!--{{hero.name}} {{hero.power}}-->
 
-<div class="card" style="width: 18rem;">
+<div *ngIf="selectedHero">
+<h1>Selected hero</h1>
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+  </div>
+</div>
+
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" >
+    <span class="badge" >{{hero.id}}</span> {{hero.name}} <b>{{hero.power}}</b>
+  </li>
+</ul>
+
+<div *ngFor="let hero of heroes" class="card" style="width: 18rem;" (click)="onSelect(hero)">
 
   <div class="card-body">
     <h5 class="card-title">{{hero.name | titlecase}}</h5>
