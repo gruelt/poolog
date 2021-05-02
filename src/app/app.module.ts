@@ -11,7 +11,11 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewheroComponent } from './heroes/viewhero/viewhero.component';
 
+//Url Parameters / data
 import {FormsModule} from '@angular/forms';
+
+// Httprequest
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,6 +31,7 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
 
