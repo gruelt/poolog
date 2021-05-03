@@ -19,11 +19,19 @@
 <!--  </li>-->
 <!--</ul>-->
 
-<div *ngFor="let hero of heroes" class="card" style="width: 18rem;" (click)="onSelect(hero)">
 
+<div *ngFor="let hero of heroes" class="card" style="width: 18rem;" (click)="onSelect(hero)">
+  <button mat-raised-button color="primary"
+          matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+    Action
+  </button>
   <div class="card-body">
     <h5 class="card-title">{{hero.name | titlecase}}</h5>
     <span class="badge badge-warning">#{{hero.id}}</span>
+    <button mat-raised-button color="primary"
+    matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+    Action
+    </button>
     <p class="card-text">{{hero.power | titlecase}}.</p>
     <label for="name">Hero name: </label>
 

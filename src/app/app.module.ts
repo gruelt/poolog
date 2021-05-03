@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewheroComponent } from './heroes/viewhero/viewhero.component';
 
 
+
 // Url Parameters / data
 import {FormsModule} from '@angular/forms';
 
@@ -29,7 +30,7 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
     VelivertComponent,
     HeroesComponent,
     ViewheroComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
   ],
   imports: [
     BrowserModule,
