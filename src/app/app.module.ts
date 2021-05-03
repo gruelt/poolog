@@ -11,11 +11,14 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewheroComponent } from './heroes/viewhero/viewhero.component';
 
-//Url Parameters / data
+
+// Url Parameters / data
 import {FormsModule} from '@angular/forms';
 
 // Httprequest
 import { HttpClientModule } from '@angular/common/http';
+import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
+
 
 
 @NgModule({
@@ -25,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     RecordComponent,
     VelivertComponent,
     HeroesComponent,
-    ViewheroComponent
+    ViewheroComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
