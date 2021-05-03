@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
+import {Velivert} from './velivert';
+import {VelivertapiService} from './velivertapi.service';
+import {HeroService} from '../heroes/hero.service';
 
 @Component({
   selector: 'app-velivert',
@@ -8,19 +11,26 @@ import axios from 'axios';
 })
 export class VelivertComponent implements OnInit {
 
-  constructor() { }
+  veliverts: Velivert[]=[];
+  velivertstr: string="rien";
+
+  test: string;
+
+  constructor(private VelivertService:VelivertapiService) { }
 
   ngOnInit(): void {
-
-
-    axios.get('https://saint-etienne-gbfs.klervi.net/gbfs/en/station_information.json', {
-      params: {
-        ID: 12345
-      }
-    })
-      .then(function (response) {
-        console.log(response);
-      });
+    this.getVelivert();
+    this.getVelivertstr();
   }
+
+  getVelivert(): void{
+    this.VelivertService.getVeliverts().subscribe(veliverts => this.veliverts = veliverts);
+  }
+
+  getVelivertstr(): void{
+    this.VelivertService.getVelivertstr().subscribe((data => this.velivertstr = data));
+  }
+
+
 
 }
