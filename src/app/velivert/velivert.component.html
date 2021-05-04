@@ -1,4 +1,13 @@
 <h1>Velivert</h1>
 
+{{velivertsany | json}}
+{{amiiboany | json}}
+
+<li *ngFor="let package of angularpackages">
+  {{package.package.name}}
+</li>
+
+{{angularpackages | json}}
+
 {{veliverts}}
 
