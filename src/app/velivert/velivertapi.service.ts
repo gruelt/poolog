@@ -41,6 +41,10 @@ export class VelivertapiService {
     return this.http.get<any>(this.ammibourl);
   }
 
+  getGymnastes(): Observable<any>{
+    return this.http.get<any>('http://my.fjepgym.fr/api/admin/gymnastes/saison/3');
+  }
+
 
 
 }

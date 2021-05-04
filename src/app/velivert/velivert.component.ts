@@ -17,6 +17,7 @@ export class VelivertComponent implements OnInit {
   angularpackages: any = 'rien';
   velivertsany: any = 'rien';
   amiiboany: any = 'vide';
+  gymnastes: any = 'personne';
 
   test: string;
 
@@ -28,6 +29,7 @@ export class VelivertComponent implements OnInit {
     this.getAngularany();
     this.getVelivertsany();
     this.getAmiiboany();
+    this.getGymnastes();
   }
 
   getVelivert(): void{
@@ -59,6 +61,9 @@ export class VelivertComponent implements OnInit {
     this.VelivertService.getAmiibo().subscribe(data => this.amiiboany = data,error => console.log(error));
   }
 
+  getGymnastes(): void{
+    this.VelivertService.getGymnastes().subscribe( data => this.gymnastes = data );
+  }
 
 
 }
