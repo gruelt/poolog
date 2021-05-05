@@ -17,11 +17,13 @@ import { ViewheroComponent } from './heroes/viewhero/viewhero.component';
 import {FormsModule} from '@angular/forms';
 
 // Httprequest
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 
 
 import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
 
+//Materials
+import {MatSliderModule} from '@angular/material/slider';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
     HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
-
+    HttpClientJsonpModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

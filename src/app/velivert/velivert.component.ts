@@ -3,6 +3,7 @@ import axios from 'axios';
 import {Velivert} from './velivert';
 import {VelivertapiService} from './velivertapi.service';
 import {HeroService} from '../heroes/hero.service';
+import {MatSlider} from '@angular/material/slider';
 
 @Component({
   selector: 'app-velivert',
@@ -18,6 +19,7 @@ export class VelivertComponent implements OnInit {
   velivertsany: any = 'rien';
   amiiboany: any = 'vide';
   gymnastes: any = 'personne';
+  slider: number = 5;
 
   test: string;
 

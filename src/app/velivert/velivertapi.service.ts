@@ -42,7 +42,7 @@ export class VelivertapiService {
   }
 
   getGymnastes(): Observable<any>{
-    return this.http.get<any>('http://my.fjepgym.fr/api/admin/gymnastes/saison/3');
+    return this.http.get<any>('http://localhost:8000/api/admin/gymnastes/saison/2');
   }
 
 
