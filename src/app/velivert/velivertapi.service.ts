@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Velivert} from './velivert';
 import {HttpClient} from '@angular/common/http';
 import {HttpHeaders} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable,timer} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

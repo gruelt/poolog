@@ -4,6 +4,7 @@ import {Velivert} from './velivert';
 import {VelivertapiService} from './velivertapi.service';
 import {HeroService} from '../heroes/hero.service';
 import {MatSlider} from '@angular/material/slider';
+import {interval, Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-velivert',
@@ -20,6 +21,9 @@ export class VelivertComponent implements OnInit {
   amiiboany: any = 'vide';
   gymnastes: any = 'personne';
   slider: number = 5;
+  intervalid: any;
+
+
 
   test: string;
 
@@ -31,7 +35,8 @@ export class VelivertComponent implements OnInit {
     this.getAngularany();
     this.getVelivertsany();
     this.getAmiiboany();
-    this.getGymnastes();
+    //this.getGymnastes();
+    this.getGymnastesLive();
   }
 
   getVelivert(): void{
@@ -64,6 +69,19 @@ export class VelivertComponent implements OnInit {
   }
 
   getGymnastes(): void{
+
+    this.VelivertService.getGymnastes().subscribe( data => this.gymnastes = data );
+  }
+
+  getGymnastesLive(): void{
+
+    this.intervalid = setInterval(() => {
+      this.VelivertService.getGymnastes().subscribe( data => this.gymnastes = data );
+      console.log ('change');
+    }, 3000);
+
+
+
     this.VelivertService.getGymnastes().subscribe( data => this.gymnastes = data );
   }
 

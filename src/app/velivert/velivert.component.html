@@ -1,8 +1,11 @@
 <mat-slider displayWith min="1" max="10" step="1" [(value)]='slider'></mat-slider>
 {{slider}}
 <h1>Velivert</h1>
+<button (click)="getGymnastesLive()">update</button>
 {{gymnastes | json}}
 <hr>
+
+
 
 {{velivertsany | json}}
 {{amiiboany | json}}
