@@ -11,6 +11,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewheroComponent } from './heroes/viewhero/viewhero.component';
 
+import { GymnastesAllComponent } from './gymnastes/gymnastes-all/gymnastes-all.component';
+
 
 
 // Url Parameters / data
@@ -26,6 +28,9 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
 import {MatSliderModule} from '@angular/material/slider';
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +40,7 @@ import {MatSliderModule} from '@angular/material/slider';
     HeroesComponent,
     ViewheroComponent,
     HeroDetailComponent,
+    GymnastesAllComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { RecordComponent} from './record/record.component';
 import { VelivertComponent} from './velivert/velivert.component';
 import { HeroesComponent} from './heroes/heroes.component';
 import { ViewheroComponent} from './heroes/viewhero/viewhero.component';
+import {GymnastesAllComponent} from './gymnastes/gymnastes-all/gymnastes-all.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,13 @@ const routes: Routes = [
   {
     path: 'heroes/:id',
     component: ViewheroComponent,
+  },
+  {
+    path: 'gymnastes',
+    component: GymnastesAllComponent,
   }
+
+
 
 
 ];
