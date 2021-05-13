@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LaragymService} from '../laragym.service';
 
 @Component({
   selector: 'app-gymnastes-all',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GymnastesAllComponent implements OnInit {
 
-  constructor() { }
+  gymnastes: any[];
+
+  constructor(private laragym:LaragymService) { }
 
   ngOnInit(): void {
+    this.getGymnastes();
+  }
+
+  getGymnastes(): void {
+    this.laragym.getGymnastes().subscribe( data => this.gymnastes = data );
   }
 
 }
