@@ -1,26 +1,9 @@
 
 <div *ngFor="let te of test"> {{te.id}} {{te.name}}</div>
 <hr>
-  <table class="table">
-    <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let gym of gymnastes">
-      <th scope="row">1</th>
-      <td>{{gym.nom}}</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-
-    </tbody>
-  </table>
-  <hr>
+{{gymnastes[0]}}
+<li *ngFor="let gym of gymnastes">{{gym.nom}}</li>
+<hr>
 <mat-table [dataSource]="gymnastes">
 
   <ng-container matColumnDef="nom">
