@@ -7,17 +7,29 @@ import { LaragymService} from '../laragym.service';
   styleUrls: ['./gymnastes-all.component.css']
 })
 export class GymnastesAllComponent implements OnInit {
-
-  gymnastes: any[];
+  gymnaste: any ;
+  gymnastes: any[] = [];
+  test: any[] = [
+    {id: 1, name:'Superman'},
+    {id: 2, name:'Batman'},
+    {id: 5, name:'BatGirl'},
+    {id: 3, name:'Robin'},
+    {id: 4, name:'Flash'}
+  ];
 
   constructor(private laragym:LaragymService) { }
 
   ngOnInit(): void {
     this.getGymnastes();
+    this.getGymnaste();
   }
 
   getGymnastes(): void {
     this.laragym.getGymnastes().subscribe( data => this.gymnastes = data );
+  }
+
+  getGymnaste(): void{
+    this.laragym.getGymnaste().subscribe( data => this.gymnaste = data)
   }
 
 }
