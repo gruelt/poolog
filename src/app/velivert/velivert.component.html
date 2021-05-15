@@ -1,5 +1,12 @@
 <mat-slider displayWith min="1" max="10" step="1" [(value)]='slider'></mat-slider>
 {{slider}}
+<!--{{angularpackages |json}}-->
+<li *ngFor="let package of angularpackages">
+  {{package.package.name}}- {{package.package.links.homepage}}
+</li>
+
+
+
 <h1>Velivert</h1>
 <button (click)="getGymnastesLive()">update</button>
 {{gymnastes | json}}
@@ -10,9 +17,7 @@
 {{velivertsany | json}}
 {{amiiboany | json}}
 
-<li *ngFor="let package of angularpackages">
-  {{package.package.name}}
-</li>
+
 
 {{angularpackages | json}}
 
