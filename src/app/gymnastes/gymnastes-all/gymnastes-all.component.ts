@@ -9,6 +9,7 @@ import { LaragymService} from '../laragym.service';
 export class GymnastesAllComponent implements OnInit {
   gymnaste: any ;
   gymnastes: any[] = [];
+  saisons: any ;
   test: any[] = [
     {id: 1, name:'Superman'},
     {id: 2, name:'Batman'},
@@ -22,6 +23,7 @@ export class GymnastesAllComponent implements OnInit {
   ngOnInit(): void {
     this.getGymnastes();
     this.getGymnaste();
+    this.getSaisons();
   }
 
   getGymnastes(): void {
@@ -29,7 +31,11 @@ export class GymnastesAllComponent implements OnInit {
   }
 
   getGymnaste(): void{
-    this.laragym.getGymnaste().subscribe( data => this.gymnaste = data)
+    this.laragym.getGymnaste().subscribe( data => this.gymnaste = data);
+  }
+
+  getSaisons(): void{
+    this.laragym.getSaisons().subscribe( data => this.saisons = data);
   }
 
 }
