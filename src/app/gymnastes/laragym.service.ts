@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {Gymnaste} from './gymnaste';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class LaragymService {
   constructor(private http: HttpClient ) {}
 
 
-  getGymnastes(): Observable<any[]>{
+  getGymnastes(): Observable<Gymnaste[]>{
     return this.http.get<any>('http://localhost:8000/api/admin/gymnastes/saison/2/simple');//.map(response => response.json());
   }
 

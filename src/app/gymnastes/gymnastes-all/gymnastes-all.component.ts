@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LaragymService} from '../laragym.service';
+import {MatTableDataSource} from '@angular/material/table';
+import {Gymnaste} from '../gymnaste';
 
 @Component({
   selector: 'app-gymnastes-all',
@@ -7,8 +9,11 @@ import { LaragymService} from '../laragym.service';
   styleUrls: ['./gymnastes-all.component.css']
 })
 export class GymnastesAllComponent implements OnInit {
+
+
+
   gymnaste: any ;
-  gymnastes: any[] = [];
+  gymnastes: Gymnaste[] = [];
   saisons: any ;
   test: any[] = [
     {id: 1, name:'Superman'},
@@ -18,9 +23,13 @@ export class GymnastesAllComponent implements OnInit {
     {id: 4, name:'Flash'}
   ];
 
+  dataSource = new MatTableDataSource<any>(this.test);
+
   constructor(private laragym:LaragymService) { }
 
   ngOnInit(): void {
+    // this.dataSource = new MatTableDataSource();
+
     this.getGymnastes();
     this.getGymnaste();
     this.getSaisons();
@@ -35,7 +44,7 @@ export class GymnastesAllComponent implements OnInit {
   }
 
   getSaisons(): void{
-    this.laragym.getSaisons().subscribe( data => this.saisons = data);
+    this.laragym.getSaisons().subscribe( data => this.saisons = JSON.parse(data));
   }
 
 }
