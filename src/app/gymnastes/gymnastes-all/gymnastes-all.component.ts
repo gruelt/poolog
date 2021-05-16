@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { LaragymService} from '../laragym.service';
 import {MatTableDataSource} from '@angular/material/table';
+import {MatSlider} from '@angular/material/slider';
 import {Gymnaste} from '../gymnaste';
+
 
 @Component({
   selector: 'app-gymnastes-all',

@@ -7,7 +7,27 @@
 <li *ngFor="let gym of gymnastes ">{{gym.nom }} {{gym.prenom}}</li>
 
 <hr>
-<table mat-table [dataSource]="gymnastes">
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Country</th>
+    <th scope="col">Area</th>
+    <th scope="col">Population</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let gym of gymnastes; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+
+      {{ gym.nom }}
+    </td>
+    <td>{{ gym.prenom }}</td>
+    <td><img [src]="'http://localhost:8000/storage/'+gym.photo"> </td>
+  </tr>
+  </tbody>
 </table>
 
 

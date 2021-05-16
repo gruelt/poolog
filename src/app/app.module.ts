@@ -26,7 +26,9 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
 
 //Materials
 import {MatSliderModule} from '@angular/material/slider';
-import { MatTableModule} from '@angular/material/table';
+
+
+
 
 
 @NgModule({
@@ -48,8 +50,7 @@ import { MatTableModule} from '@angular/material/table';
     NgbModule,
     BrowserAnimationsModule,
     HttpClientJsonpModule,
-    MatSliderModule,
-    MatTableModule
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
