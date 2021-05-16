@@ -65,7 +65,7 @@ export class VelivertComponent implements OnInit {
   }
 
   getAmiiboany(): void{
-    this.VelivertService.getAmiibo().subscribe(data => this.amiiboany = data,error => console.log(error));
+    this.VelivertService.getAmiibo().subscribe(data => this.amiiboany = data.amiibo,error => console.log(error));
   }
 
   getGymnastes(): void{

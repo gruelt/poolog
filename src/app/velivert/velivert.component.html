@@ -6,6 +6,10 @@
 </li>
 
 
+<li *ngFor="let amii of amiiboany">
+  {{ amii | json }}
+</li>
+
 
 <h1>Velivert</h1>
 <button (click)="getGymnastesLive()">update</button>

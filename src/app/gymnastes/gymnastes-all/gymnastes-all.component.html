@@ -1,19 +1,14 @@
-{{gymnastes[0].nom}}
-<mat-slider displayWith min="1" max="10" step="1" value=5></mat-slider>
 
-<div *ngRepeat="let te of test"> {{te.id}} {{te.name}}</div>
-<div *ngFor="let te of test"> {{te.id}} {{te.name}}</div>
+<div *ngIf="gymnastes">{{ gymnastes.length }}</div>
+
+
 <hr>
 
-<li *ngFor="let gym of gymnastes ">{{gym.nom | json}}</li>
-<li *ngRepeat="x in gymnastes ">{{x}}</li>
+<li *ngFor="let gym of gymnastes ">{{gym.nom }} {{gym.prenom}}</li>
+
 <hr>
-<table mat-table [dataSource]="dataSource">
-
-  <ng-container matColumnDef="nom">
-    <th mat-header-cell *matHeaderCellDef> Nom </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-  </ng-container>
-
+<table mat-table [dataSource]="gymnastes">
 </table>
+
+
 {{gymnastes | json}}

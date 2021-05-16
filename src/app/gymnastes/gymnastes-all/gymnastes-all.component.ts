@@ -36,13 +36,13 @@ export class GymnastesAllComponent implements OnInit {
   }
 
   getGymnastes(): void {
-    this.laragym.getGymnastes().subscribe( data => this.gymnastes = data );
+    this.laragym.getGymnastes().subscribe( data => this.gymnastes = data ,error => console.log(error));
+
   }
 
-  getGymnaste(): void{
-    this.laragym.getGymnaste().subscribe( data => this.gymnaste = data);
+  getGymnaste(): void {
+    this.laragym.getGymnaste().subscribe(data => this.gymnaste = data);
   }
-
   getSaisons(): void{
     this.laragym.getSaisons().subscribe( data => this.saisons = JSON.parse(data));
   }
