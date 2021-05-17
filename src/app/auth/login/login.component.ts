@@ -22,7 +22,17 @@ export class LoginComponent implements OnInit {
 
   loginAttempt(): void{
     console.log('attempt login with '+ this.username.value + ' - ' + this.pass.value);
-    this.login.login(this.username.value, this.pass.value).subscribe(data =>this.token);
+
+    const data = {
+      username: this.username,
+      password: this.pass,
+      grant_type: 'client_credentials',
+      client_id: 2,
+      client_secret: 'MsK3KhLrbYWPvUj79yNSLrxT7asxHhqS4zHOSer0',
+      scope: '*'
+    };
+
+    this.login.login(data).subscribe(data =>this.token);
   }
 
   getLogin(): void{
