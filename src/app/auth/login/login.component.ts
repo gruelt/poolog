@@ -12,16 +12,17 @@ export class LoginComponent implements OnInit {
 
   constructor(private login: LoginService) { }
 
-  whoami: any;
-  username= new FormControl('');
-  pass= new FormControl('');
+  whoami : any;
+  token : any;
+  username = new FormControl('');
+  pass = new FormControl('');
 
   ngOnInit(): void {
   }
 
   loginAttempt(): void{
-    console.log('attempt login');
-    this.login.login();
+    console.log('attempt login with '+ this.username.value + ' - ' + this.pass.value);
+    this.login.login(this.username.value, this.pass.value).subscribe(data =>this.token);
   }
 
   getLogin(): void{
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
     this.login.getLogin().subscribe(data => this.whoami = data);
 
   }
+
 
   console($event): void{
     console.log('event '+console.log($event));

@@ -14,8 +14,15 @@ export class LoginService {
 
   constructor(private http: HttpClient ) { }
 
-  login(): Observable<any>{
-    return this.http.post<any>(this.laravelapi + 'login','data');
+  login(user, pass): Observable<any>{
+    console.log("user:"+user+pass);
+
+    return this.http.post<any>(this.laravelapi + 'login',
+      {
+        'user': user,
+        'pass': pass
+      }
+      );
   }
 
   getLogin(): Observable<any> {
