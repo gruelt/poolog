@@ -9,6 +9,7 @@ import { VelivertComponent} from './velivert/velivert.component';
 import { HeroesComponent} from './heroes/heroes.component';
 import { ViewheroComponent} from './heroes/viewhero/viewhero.component';
 import {GymnastesAllComponent} from './gymnastes/gymnastes-all/gymnastes-all.component';
+import {LoginComponent} from './auth/login/login.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'gymnastes',
     component: GymnastesAllComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   }
 
 

@@ -26,6 +26,7 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
 
 //Materials
 import {MatSliderModule} from '@angular/material/slider';
+import { LoginComponent } from './auth/login/login.component';
 
 
 
@@ -41,6 +42,7 @@ import {MatSliderModule} from '@angular/material/slider';
     ViewheroComponent,
     HeroDetailComponent,
     GymnastesAllComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
