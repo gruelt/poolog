@@ -17,6 +17,7 @@ import { GymnastesAllComponent } from './gymnastes/gymnastes-all/gymnastes-all.c
 
 // Url Parameters / data
 import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Httprequest
 import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
@@ -52,7 +53,8 @@ import { LoginComponent } from './auth/login/login.component';
     NgbModule,
     BrowserAnimationsModule,
     HttpClientJsonpModule,
-    MatSliderModule
+    MatSliderModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

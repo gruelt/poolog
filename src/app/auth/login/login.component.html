@@ -2,10 +2,12 @@
   <form action="/examples/actions/confirmation.php" method="post">
     <h2 class="text-center">Log in</h2>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Username" required="required">
+
+      <input type="text" class="form-control" [formControl]="username">
+
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" placeholder="Password" required="required">
+      <input type="password" class="form-control"  [formControl]="pass">
     </div>
     <div class="form-group">
       <button  class="btn btn-primary btn-block" (click)="loginAttempt()">Log in</button>
@@ -17,5 +19,7 @@
     </div>
   </form>
   <p class="text-center"><a href="#">Create an Account</a></p>
-  {{whoami}}
+  <p *ngIf="whoami">who ? {{whoami.username}}</p>
+  {{username.value}}<br>
+  {{pass.value}}
 </div>
