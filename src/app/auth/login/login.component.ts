@@ -24,15 +24,18 @@ export class LoginComponent implements OnInit {
     console.log('attempt login with '+ this.username.value + ' - ' + this.pass.value);
 
     const data = {
-      username: this.username,
-      password: this.pass,
-      grant_type: 'client_credentials',
-      client_id: 2,
-      client_secret: 'MsK3KhLrbYWPvUj79yNSLrxT7asxHhqS4zHOSer0',
+      username: this.username.value,
+      password: this.pass.value,
+      grant_type: 'password',
+      client_id: 5,
+      client_secret: 'AbRdX0n0A7TwlHaGp1A9FfkNGhua24suDb9dBVud',
       scope: '*'
     };
 
-    this.login.login(data).subscribe(data =>this.token);
+    this.login.login(data).subscribe(data =>
+      this.token = data.access_token
+    );
+    localStorage.setItem('token', this.token );
   }
 
   getLogin(): void{
@@ -44,6 +47,11 @@ export class LoginComponent implements OnInit {
 
   console($event): void{
     console.log('event '+console.log($event));
+  }
+
+  consoletoken(): void{
+    let user = localStorage.getItem('token');
+    console.log('token ' + user );
   }
 
 }

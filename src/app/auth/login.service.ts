@@ -15,7 +15,6 @@ export class LoginService {
   constructor(private http: HttpClient ) { }
 
   login(data): Observable<any>{
-    console.log("user:"+data);
 
     return this.http.post<any>(this.laravelapi + 'oauth/token', data);
   }
