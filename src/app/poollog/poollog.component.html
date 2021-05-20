@@ -1,0 +1,14 @@
+<p>poollog works!</p>
+
+<form [formGroup]="poolform" (ngSubmit)="onSubmit()">
+
+<label>
+    Quantité :
+  <input type="text" formControlName="quantity">
+  <input type="text" formControlName="product">
+</label>
+
+    <button type="submit" [disabled]="!poolform.valid">Submit</button>
+</form>
+
+{{poolform.value }}

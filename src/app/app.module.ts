@@ -28,6 +28,7 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
 //Materials
 import {MatSliderModule} from '@angular/material/slider';
 import { LoginComponent } from './auth/login/login.component';
+import { PoollogComponent } from './poollog/poollog.component';
 
 
 
@@ -44,6 +45,7 @@ import { LoginComponent } from './auth/login/login.component';
     HeroDetailComponent,
     GymnastesAllComponent,
     LoginComponent,
+    PoollogComponent,
   ],
   imports: [
     BrowserModule,
