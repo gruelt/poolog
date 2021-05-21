@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+
+import { FormControl,FormGroup,FormBuilder,Validators,FormArray } from '@angular/forms';
+
 
 @Component({
   selector: 'app-poollog',
@@ -8,13 +10,24 @@ import {FormControl, FormGroup} from '@angular/forms';
 })
 export class PoollogComponent implements OnInit {
 
-  poolform = new FormGroup({
-    quantity : new FormControl(''),
-    product : new FormControl('')
+
+  // poolform = new FormGroup({
+  //   quantity : new FormControl(''),
+  //   product : new FormControl(''),
+  //   date : new FormControl('')
+  // });
+
+  poolform = this.pf.group({
+    quantity: ['200',[Validators.required,Validators.max(1000)]],
+    product: ['Chlore',Validators.required],
+    who: [''],
+    date: [''],
+    aliases: this.pf.array([
+      this.pf.control('')
+    ])
   });
 
-
-  constructor() { }
+  constructor(private pf: FormBuilder) { }
 
   ngOnInit(): void {
   }
@@ -27,5 +40,25 @@ export class PoollogComponent implements OnInit {
     // TODO: Use EventEmitter with form value
     console.warn(this.poolform.value);
   }
+
+  updateValue() {
+    this.poolform.patchValue({
+        quantity : 200,
+        product : "Ph+"
+      }
+    );
+  }
+
+  get aliases() {
+    return this.poolform.get('aliases') as FormArray;
+  }
+
+  addAlias() {
+    this.aliases.push(this.pf.control(''));
+  }
+
+
+
+
 
 }
