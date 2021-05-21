@@ -53,8 +53,16 @@ export class PoollogComponent implements OnInit {
     return this.poolform.get('aliases') as FormArray;
   }
 
+  get hello() {
+    return "hello " + this.poolform.get('product').value;
+  }
+
   addAlias() {
     this.aliases.push(this.pf.control(''));
+  }
+
+  delAliad(id){
+    this.aliases.removeAt(id);
   }
 
 

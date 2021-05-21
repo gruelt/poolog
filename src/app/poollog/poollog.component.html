@@ -4,6 +4,10 @@
     <h2 class="text-center">Log in</h2>
     <div class="form-group">
 
+      <label *ngFor="let form in poolform">
+        hello
+      </label>
+
       <label>
         Quantité
 
@@ -35,13 +39,13 @@
     <div class="form-group">
 
       <div formArrayName="aliases">
-        <h3>Aliases</h3> <button (click)="addAlias()">Add Alias</button>
+        <h3>Aliases</h3> <button class="btn btn-success" (click)="addAlias()">Add Alias</button>
 
         <div *ngFor="let alias of aliases.controls; let i=index">
           <!-- The repeated alias template -->
           <label>
-            Alias:
-            <input type="text" [formControlName]="i">
+            Alias {{i}}:
+            <input type="text" [formControlName]="i"> <button class="btn  btn-danger" (click)="delAliad(i)">Suppr</button>
           </label>
         </div>
       </div>
@@ -64,6 +68,9 @@
 
   <p>
     Form Values: {{poolform.getRawValue() | json}}
+  </p>
+  <p>
+    Hello is : {{hello}}
   </p>
 
 </div>
