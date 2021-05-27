@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   token : any;
   username = new FormControl('');
   pass = new FormControl('');
+  csrf : any;
 
   ngOnInit(): void {
   }
@@ -42,6 +43,11 @@ export class LoginComponent implements OnInit {
     console.log('get login'+this.username);
     this.login.getLogin().subscribe(data => this.whoami = data);
 
+  }
+
+  getCsrf(): void{
+    this.login.getcsrf().subscribe( data => this.csrf = data );
+    console.log('csrf' + this.csrf);
   }
 
 

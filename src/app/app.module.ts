@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +10,6 @@ import { RecordComponent } from './record/record.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VelivertComponent } from './velivert/velivert.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewheroComponent } from './heroes/viewhero/viewhero.component';
 
 import { GymnastesAllComponent } from './gymnastes/gymnastes-all/gymnastes-all.component';
